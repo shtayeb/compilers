@@ -15,7 +15,7 @@ Syntax Example:
 Setup:
 Visit the readme in the dropbear folder in this repository.
 
-## See a Bug or Typo?:
+## See a Bug or Typo?
 Pull requests are welcome!
 
 ## Resources
