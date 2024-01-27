@@ -1,7 +1,27 @@
 const { traverse } = require('./traverse');
 
-const transform = node => {};
+const transform = node => {
+  traverse(node,{
+    CallExpression:{
+      enter({node}){
+        if(specialForms[node.name]){
+          specialForms[node.name](node);
+        }
+      }
+    }
+  })
+  return node;
+};
 
-const specialForms = {};
+const specialForms = {
+  define(node){
+   const [identifier,assignment] = node.arguments; 
+    node.type = "VariableDeclarations"
+    node.identifier = identifier 
+    node.assignment= assignment
+    delete node.name;
+    delete node.arguments;
+  }
+};
 
 module.exports = { specialForms, transform };
