@@ -1,4 +1,4 @@
-# Compilter and Interperters
+# Compilers and Interperters
 This repo contains my compilers and interpreters.
 
 ## Languages
