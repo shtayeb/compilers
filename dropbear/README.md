@@ -1,21 +1,25 @@
-# Compilter and Interperters
-This repo contains my compilers and interpreters.
-
-## Languages
-
-### Dropbear
+# Dropbear Programming Language
 A very simple programming language with a REPL and compiler to JavaScript.
 
-Syntax Example:
+## Syntax Example
 ```
 (define x 2)
 
 (add x 3)
 ```
-Setup:
-Visit the readme in the dropbear folder in this repository.
 
-## See a Bug or Typo?:
+## Getting started
+
+- Install node dep
+```shell
+npm install
+```
+- Run the REPL  
+```shell
+npm start
+```
+
+## See a Bug or Typo?
 Pull requests are welcome!
 
 ## Resources
