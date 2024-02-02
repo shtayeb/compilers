@@ -3,6 +3,20 @@ This repo contains my compilers and interpreters.
 
 ## Languages
 
+### Monkey
+> WIP
+
+Built with GO with a REPL.
+
+Syntax Exmaple:
+```
+let ten = 10;
+
+let add = fn(x, y) {
+  x + y;
+};
+```
+
 ### Dropbear
 A very simple programming language with a REPL and compiler to JavaScript.
 
@@ -19,4 +33,5 @@ Visit the readme in the dropbear folder in this repository.
 Pull requests are welcome!
 
 ## Resources
--  [Building Your Own Programming Language](https://frontendmasters.com/courses/programming-language/) course!
+- [Writing An Interpreter in GO](https://interpreterbook.com/)
+- [Building Your Own Programming Language](https://frontendmasters.com/courses/programming-language/) course!
