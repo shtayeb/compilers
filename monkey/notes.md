@@ -12,3 +12,12 @@ Context free grammer -> CFG
     - Early parsing
     - Predictive parsing
 - bottom-up parsing(start by contructing leaf nodes then ascends)
+
+### Top Down Operator Precedence(or: PRATT Parsing)
+
+### Parsing Terminology
+- Prefix Operator: is an operator "in front of" its operand. Example `--5`
+    The oprator is -- (decrement) and the operand is 5
+
+- Postfix Operator: an operator after its operand. Example: `foobar++`
+- Infix Operatro: an operator sits between its operands. `5 * 8`
