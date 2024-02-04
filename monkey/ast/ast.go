@@ -37,6 +37,14 @@ type LetStatement struct {
 func (ls *LetStatement) statemendNode()       {}
 func (ls *LetStatement) TokenLiteral() string { return ls.Token.Literal }
 
+type ReturnStatement struct {
+	Token       token.Token // the 'return' token
+	ReturnValue Expression
+}
+
+func (rs *ReturnStatement) statemendNode()       {}
+func (rs *ReturnStatement) TokenLiteral() string { return rs.Token.Literal }
+
 type Identifier struct {
 	Token token.Token
 	Value string
