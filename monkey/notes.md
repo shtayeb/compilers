@@ -26,7 +26,10 @@ Context free grammer -> CFG
 ## Strategies of Evaluation
 Giving meaning to symbols.
 
-### Tree-Walking Interpreters
-Traverse the AST, visit each node and do what the node signifies.
+- Tree-Walking Interpreters
+  Traverse the AST, visit each node and do what the node signifies.
+  Sometimes Evaluation is preceded by a small optimization that rewrites the AST or convert it to another immediate representation that is more suitable for repeated evaluation.
+
+- Sometimes the AST is converted to bytecode and is run by a virtual machine
 
 
