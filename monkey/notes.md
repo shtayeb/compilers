@@ -21,3 +21,12 @@ Context free grammer -> CFG
 
 - Postfix Operator: an operator after its operand. Example: `foobar++`
 - Infix Operatro: an operator sits between its operands. `5 * 8`
+
+
+## Strategies of Evaluation
+Giving meaning to symbols.
+
+### Tree-Walking Interpreters
+Traverse the AST, visit each node and do what the node signifies.
+
+
