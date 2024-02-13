@@ -32,4 +32,5 @@ Giving meaning to symbols.
 
 - Sometimes the AST is converted to bytecode and is run by a virtual machine
 
-
+## Environment
+ the environment is a hash map that associates strings with objects.
