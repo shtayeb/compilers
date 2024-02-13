@@ -235,7 +235,7 @@ func (p *Parser) parseGroupedExpression() ast.Expression {
 
 	exp := p.parseExpression(LOWEST)
 
-	if !p.expectPeek(token.LPAREN) {
+	if !p.expectPeek(token.RPAREN) {
 		return nil
 	}
 
@@ -422,8 +422,8 @@ func (p *Parser) expectPeek(t token.TokenType) bool {
 	if p.peekTokenIs(t) {
 		p.nextToken()
 		return true
+	} else {
+		p.peekError(t)
+		return false
 	}
-
-	p.peekError(t)
-	return false
 }
