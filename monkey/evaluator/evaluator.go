@@ -96,7 +96,6 @@ func Eval(node ast.Node, env *object.Environment) object.Object {
 		if len(elements) == 1 && isError(elements[0]) {
 			return elements[0]
 		}
-
 		return &object.Array{Elements: elements}
 
 	case *ast.IndexExpression:
