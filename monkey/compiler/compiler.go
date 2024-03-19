@@ -1,6 +1,8 @@
 package compiler
 
 import (
+	"fmt"
+
 	"github.com/shtayeb/compilers/monkey/ast"
 	"github.com/shtayeb/compilers/monkey/code"
 	"github.com/shtayeb/compilers/monkey/object"
@@ -44,8 +46,15 @@ func (c *Compiler) Compile(node ast.Node) error {
 			return err
 		}
 
+		switch node.Operator {
+		case "+":
+			c.emit(code.OpAdd)
+		default:
+			return fmt.Errorf("unknown operator %s", node.Operator)
+		}
+
 	case *ast.IntegerLiteral:
-		// todo
+		// TODO:
 		integer := &object.Integer{Value: node.Value}
 		c.emit(code.OpConstant, c.addConstant(integer))
 
@@ -72,12 +81,12 @@ func (c *Compiler) addInstruction(ins []byte) int {
 
 func (c *Compiler) ByteCode() *ByteCode {
 	return &ByteCode{
-		Instruction: c.instructions,
-		Constants:   c.constants,
+		Instructions: c.instructions,
+		Constants:    c.constants,
 	}
 }
 
 type ByteCode struct {
-	Instruction code.Instructions
-	Constants   []object.Object
+	Instructions code.Instructions
+	Constants    []object.Object
 }

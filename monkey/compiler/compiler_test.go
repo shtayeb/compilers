@@ -32,6 +32,7 @@ func TestIntegerArithmetic(t *testing.T) {
 			expectedInstructions: []code.Instructions{
 				code.Make(code.OpConstant, 0),
 				code.Make(code.OpConstant, 1),
+				code.Make(code.OpAdd),
 			},
 		},
 	}
@@ -52,7 +53,7 @@ func runCompilerTests(t *testing.T, tests []compilerTestCase) {
 		}
 
 		bytecode := compiler.ByteCode()
-		err = testInstructions(tt.expectedInstructions, bytecode.Instruction)
+		err = testInstructions(tt.expectedInstructions, bytecode.Instructions)
 		if err != nil {
 			t.Fatalf("testInstructions failed: %s", err)
 		}
