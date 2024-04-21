@@ -39,3 +39,5 @@ Giving meaning to symbols.
 ## Building a Compiler in GO
 
 ## Executing jumps
+
+## Chapter 5: Keeping track of names
