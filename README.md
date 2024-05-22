@@ -34,4 +34,5 @@ Pull requests are welcome!
 
 ## Resources
 - [Writing An Interpreter in GO](https://interpreterbook.com/)
+- [Writing A Compiler in GO]( https://compilerbook.com/)
 - [Building Your Own Programming Language](https://frontendmasters.com/courses/programming-language/) course!
